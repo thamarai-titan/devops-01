@@ -13,7 +13,7 @@ app.use(express.json());
 // Health check
 app.get("/health", (req, res) => {
   res.status(200).json({
-    status: ok,
+    status: "ok",
     message: "Server is running",
   });
 });
@@ -27,5 +27,6 @@ app.get("/", (req, res) => {
 
 // Start server
 app.listen(PORT, '0.0.0.0', () => {
-  console.log();
+  console.log(`Server is running on port ${PORT}`);
 });
+
